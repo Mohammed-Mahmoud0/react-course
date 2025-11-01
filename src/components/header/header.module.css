@@ -1,0 +1,9 @@
+.header {
+  display: flex;
+  justify-content: space-around;
+}
+
+.list{
+  display: flex;
+  gap: 15px;
+}
