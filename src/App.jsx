@@ -21,7 +21,18 @@ const App = () => {
   // const [lastName, setLastName] = useState("");
   // const [user, setUser] = useState({ firstName: "mo7", lastName: "mahmoud" });
 
+  // const [name, setName] = useState("");
+
   const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log({ name, password });
+
+    if (name === "" || password === "") {
+      alert("Please fill in all fields");
+    }
+  };
 
   return (
     <>
@@ -54,9 +65,30 @@ const App = () => {
       </button> */}
 
       <h1>Hello, World</h1>
-      <input type="text" placeholder="Enter Your Name" onChange={(e) => setName(e.target.value)}></input>
-      <h2>Your Name is: {name}</h2>
+      {/* <input
+        type="text"
+        placeholder="Enter Your Name"
+        onChange={(e) => setName(e.target.value)}
+      ></input>
+      <h2>Your Name is: {name}</h2> */}
 
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="userName">UserName</label>
+        <input
+          type="text"
+          name="userName"
+          id="userName"
+          onChange={(e) => setName(e.target.value)}
+        />
+        <label htmlFor="password">Password</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <button type="submit">Login</button>
+      </form>
     </>
   );
 };
