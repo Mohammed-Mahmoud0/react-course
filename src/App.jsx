@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import Button from "./components/Button.jsx";
 import Form from "./components/Form.jsx";
@@ -15,19 +16,41 @@ const App = () => {
     console.log(`Hello, ${name}!`);
   };
 
+  // const [count, setCount] = useState(0)
+  // const [firstName, setFirstName] = useState("");
+  // const [lastName, setLastName] = useState("");
+  const [user, setUser] = useState({ firstName: "mo7", lastName: "mahmoud" });
+
   return (
     <>
       {/* <Header />
       <Form />
       <Products pr`oducts={products} /> */}
 
-      <Button onClick={() => console.log("11111111111")}>
+      {/* <Button onClick={() => console.log("11111111111")}>
         <span>hello</span>
       </Button>
       
       <Button onClick={() => console.log("22222222")}>
         <span>mo7</span>
-      </Button>
+      </Button> */}
+
+      <h1>
+        Hello, {user.firstName} {user.lastName}
+      </h1>
+      {/* <h2>Count: {count}</h2>
+      <button onClick={() => setCount((prev) => prev + 1)}>Increment</button>
+      <button onClick={() => setCount((prev) => prev - 1)}>Decrement</button>
+      <button onClick={() => setCount(0)}>Reset</button> */}
+      {/* <button
+        type="button"
+        onClick={() => {
+          setUser({ ...user, lastName: "testfirst" });
+        }}
+      >
+        Change FirstName
+      </button> */}
+      
     </>
   );
 };
