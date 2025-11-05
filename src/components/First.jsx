@@ -1,14 +1,12 @@
-import React, { Component } from 'react'
-import Mid from './Mid'
+import React, { Component } from "react";
+import Mid from "./Mid";
 
-export class First extends Component {
-  render() {
-    return (
-      <>
-        <Mid />
-      </>
-    )
-  }
-}
+const First = () => {
+  return (
+    <>
+      <Mid />
+    </>
+  );
+};
 
-export default First
+export default First;

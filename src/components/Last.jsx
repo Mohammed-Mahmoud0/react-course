@@ -1,18 +1,14 @@
-import React, { Component } from "react";
+import React, { Component, useContext } from "react";
 import { UserNameContext } from "../App";
 
-export class Last extends Component {
-  render() {
-    return (
-      <>
-        {
-          <UserNameContext.Consumer>
-            {(userName) => <h2>Component {userName}</h2>}   
-          </UserNameContext.Consumer>
-        }
-      </>
-    );
-  }
-}
+const Last = () => {
+  const userName = useContext(UserNameContext);
+
+  return (
+    <>
+      <h2>Hello, {userName}!</h2>
+    </>
+  );
+};
 
 export default Last;
